@@ -1,4 +1,4 @@
-#Python Progress
+# Python Progress
 A repository showing my journey from basics in python.
 
 ## Project Files
