@@ -1,8 +1,10 @@
-A repository showing my Python progress
+#Python Progress
+A repository showing my journey from basics in python.
 
 ## Project Files
 
-* **Calculator.py**: A simple command-line calculator program.
-* **GOT_game.py**: A basic "Game of Thrones" themed quiz or text-adventure game.
-* **Number Guess Game.py**: A classic number guessing game.
-* **Rock, Paper, Scissors.py**: A command-line implementation of the classic game.
+* **Number Guess Game.py**: Just a  normal number guessing game.
+* **Calculator.py**: A simple calculator program with 4 basic operations of Addition, Subtraction, Multiplication and Division.
+* * **Rock, Paper, Scissors.py**: A program for a classic game.
+* **GOT_game.py**: A basic "Game of Thrones" themed quiz game based on different regions of it.
+
