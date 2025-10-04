@@ -9,3 +9,4 @@ A repository showing my journey from basics in python.
 * **GOT_game.py**: A basic "Game of Thrones" themed quiz game based on different regions of it.
 * **GK_Quiz**: A General Knowledge Quiz game using lists and loops.
 * **Dice**: A virtual dice generating dice numerals.
+* **To-Do List (console)**: A to-do list that lets you add,remove andview your tasks in the console itself.
