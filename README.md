@@ -23,6 +23,7 @@ Each project here represents a new concept I explored — from simple input/outp
 | 🎲 **Dice Roller** | A virtual dice that generates random outcomes each roll. |
 | 📝 **To-Do List (Console)** | A command-line to-do app that lets you add, remove, and view tasks. |
 | 🔐 **Password Generator** | Creates secure passwords of customizable length. |
+| 💸 **Expense Tracker (Console)** | Record, categorize, and calculate total income and expenses in the command line. |
 
 ---
 
