@@ -10,3 +10,4 @@ A repository showing my journey from basics in python.
 * **GK_Quiz**: A General Knowledge Quiz game using lists and loops.
 * **Dice**: A virtual dice generating dice numerals.
 * **To-Do List (console)**: A to-do list that lets you add,remove andview your tasks in the console itself.
+* **Password_generator**:A simple project that generates password of user defined length.
