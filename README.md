@@ -74,5 +74,3 @@ Each project here represents a new concept I explored — from simple input/outp
 - Web frameworks (Flask, Django)  
 - API integration and data visualization  
 - GUI applications (Tkinter, Pygame)  
-   git clone https://github.com/yourusername/Python_Progress.git
-   cd Python_Progress
