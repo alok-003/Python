@@ -1,5 +1,5 @@
 # Password generator using function
-# It also saves your passwords created when running
+# Creates, displays, and saves passwords to a file.
 
 import random
 
@@ -13,7 +13,7 @@ all_char=sym+cap+num+small
 
 # Creating file to store the passwords
 
-with open("pass_saves.csv",'w') as file:
+with open("pass_saves.txt",'w') as file:
      file.write("Your Passwords: ")
 
 # Creating the function to create and store the passwords
@@ -27,14 +27,14 @@ def password_generator():
 
                 print(password)
 
-                with open("pass_saves.csv",'a') as file:
+                with open("pass_saves.txt",'a') as file:
                      file.write(password)
                      file.write("\n")
                 
                 view_choice=input("Enter 'v' to view the passwords or 'p' to proceed: ")
                 while True:
                     if view_choice=="v":
-                         with open("pass_saves.csv",'r') as file:
+                         with open("pass_saves.txt",'r') as file:
                               view=file.read()
                               print(view)
                               break
@@ -57,4 +57,5 @@ user_start=int(input("\nPress [1] to start: \n"))
 if(user_start!=1):
    print("End\nGoodbye")
 else:
+
    password_generator()   
