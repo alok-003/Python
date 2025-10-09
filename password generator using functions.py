@@ -2,6 +2,7 @@
 # Creates, displays, and saves passwords to a file.
 
 import random
+save_file="pass_saves.txt"
 
 #Creating the data from which the password would be created:
 
@@ -21,41 +22,87 @@ def password_generator():
             while True:
                 password=""
                 length=int(input("Enter the length of password needed [4],[8],[16]: "))
+                while length not in[4,8,16]:
+                    print("Invalid Choice. Try Again")
+                    length=int(input("Enter the length of password needed [4],[8],[16]: "))
+
                 for i in range(length):
                     b1=random.choice(all_char)
                     password+=b1
-
+                
                 print(password)
 
                 with open("pass_saves.txt",'a') as file:
                      file.write(password)
                      file.write("\n")
                 
-                view_choice=input("Enter 'v' to view the passwords or 'p' to proceed: ")
-                while True:
-                    if view_choice=="v":
-                         with open("pass_saves.txt",'r') as file:
-                              view=file.read()
-                              print(view)
-                              break
-                    elif view_choice=="p":
-                         print("Next Step: ")
-                         break
-                    else:
-                         print("Invalid Choice")
-                         break
-               
-                pass_repeat=input("\nDo you want another password? (y/n): ")
-                if pass_repeat=="n":
-                    print("Goodbye")
-                    break
+                view_choice1=input("Enter 'v' to view the passwords or 'p' for more passwords: ")
+                while view_choice1 not in ['v','p']:
+                     print("Invalid Choice")
+                     view_choice1=input("Enter 'v' to view the passwords or 'p' for more: ")
 
+                if view_choice1=="v":
+                     with open("pass_saves.txt",'r') as file:
+                          view=file.read()
+                          print(view)
+                     break
+                elif view_choice1=="p":
+                       password1=""
+                       length1=int(input("Enter the length of password needed [4],[8],[16]: "))
+                       while length1 not in[4,8,16]:
+                            print("Invalid Choice. Try Again")
+                            length1=int(input("Enter the length of password needed [4],[8],[16]: "))
+                       for i in range(length1):
+                            b1=random.choice(all_char)
+                            password1+=b1
+                       print(password1)
+                       with open("pass_saves.txt",'a') as file:
+                        file.write(password1)
+                        file.write("\n") 
+
+                       view_choice2=input("Enter 'v' to view the passwords or 'e' to exit ")
+                       while view_choice2 not in ['v','e']:
+                               print("Invalid Choice. Try Again \n")
+                               view_choice2=input("Enter 'v' to view the passwords or 'e' to exit ")
+                       if view_choice2=="v":
+                           with open("pass_saves.txt",'r') as file:
+                            view=file.read()
+                            print(view)
+                            break
+                       elif view_choice2=="e":
+                            print("Goodbye")
+                            break
+                       else:
+                           print("Invalid Choice")
+                           break
+                else:
+                     print("Invalid Choice\n end")
+                     break
+                        
 # The start of the program
 
 print("Welcome to password Generator\n")
 user_start=int(input("\nPress [1] to start: \n"))
-if(user_start!=1):
-   print("End\nGoodbye")
-else:
 
-   password_generator()   
+if(user_start==1):
+    password_generator()  
+elif(user_start!=1):
+   exit_choice=input("Do you want to exit?\n [y] / [n]: \n")
+   while True:
+       if (exit_choice=="y"):
+               print("Goodbye")
+               break
+       elif (exit_choice=="n"):
+               user_start=int(input("\nPress [1] to start: \n"))
+               if(user_start==1):
+                    password_generator()
+               else:
+                    print("Why Brother . Just Start this or end this")
+                    print("please restart")
+                    break
+       else:
+           print("Invalid Choice. Try Again \n")
+else:
+    print("Invalid Choice. Try Again \n")
+
+  
